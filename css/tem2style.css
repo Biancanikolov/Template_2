@@ -1,0 +1,212 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Quicksand, sans-serif;
+}
+
+ img {
+ 	width: 100%;
+ 	height: auto;
+ 	display: block;
+ }
+
+.header {
+	overflow: hidden;
+	background-color: #363636;
+
+}
+
+.header a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	padding: 14px 16px; 
+	text-decoration: none;
+}
+
+.header .dropDown {
+	float: left;
+	overflow: hidden;
+}
+
+.header .dropDown .dropBtn {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	margin: 0;
+	font-family: inherit;
+}
+
+.header a:hover, .dropDown:hover .dropBtn {
+	background-color: #FF3232;
+}
+
+.header .dropDown .dropdownContent {
+	display: none;
+	position: absolute;
+	background-color: #363636;
+	min-width: 160px;	
+	z-index: 1;
+}
+
+.dropdownContent a {
+	float: none;
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdownContent a:hover {
+	background-color: #7C7A7E;
+}
+
+.dropDown:hover .dropdownContent {
+	display: block;
+}
+
+.clear {
+	clear: both;
+}
+
+.backgroundImg {
+	background-image: url(https://images.unsplash.com/photo-1565151284956-f36a351d6157?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+	min-height: 80vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+    height: 100%;
+    background-color: rgba(239, 239, 239, 0.48);
+    /*z-index: 2; - the links from the drop-down menu cannot be selected*/ 
+    top:0;
+    left: 0;
+}
+
+
+.contentOnImg {
+	width: 50%;	/*this needs to adjust accoring to the screen keep in mind when you add media-query*/
+	position: absolute;
+	z-index: 3;
+	top: 25%;
+    left: 19%;
+}
+
+.contentOnImg h1 {
+	padding: 0;
+    margin: 0;
+}
+
+.contentOnImg h1 {
+	text-shadow: -1px -2px white;
+}
+
+.contentOnImg p {
+	font-weight: bolder;
+}
+
+
+.contentOnImg a {
+	display: inline-block;
+	padding: 6px 36px;
+	background-color: none;
+	color: black; 
+	border: 2px black solid;
+	text-decoration: none;
+	font-weight: bolder;
+	margin-right: 10px;
+}
+
+.contentOnImg a:hover {
+	background-color: black;
+	color: white;
+	transition: all .5s ease-in-out;
+}
+
+.btnHolder {
+	margin-top: 37px;
+}
+
+.heartIcon {
+	max-width: 6%;
+    text-align: center;
+    margin-left: 47%;
+    margin-top: 2%;
+}
+
+.title {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.line {
+	width: 50%;
+	padding: 1px;
+	background-color: lightgray;
+	margin-left: 26%;
+}
+
+
+
+.fourCol {
+	width: 25%;
+    float: left;
+}
+
+
+.fourColArticlesContainer {
+	display: inline-block;
+	margin-top: 6%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.fourCol h1 {
+	margin-left: 5%;
+}
+
+.fourCol p {
+	margin-left: 5%;
+}
+
+
+
+
+
+
+.space {
+	margin-top: 80%; /* Reminder to remove this later!*/
+}
+
+@media only screen and (max-width: 880px) {
+	.fourCol {
+		width: 100%;
+	}
+	.fourCol img {
+		width: 50%;
+	}
+
+	.contentOnImg a {
+		margin-top: 8px;
+	}
+
+	.contentOnImg {
+		top: 5%;		
+	}
+
+	/*drop-domwn on header is overlapping with content - need to fix this*/
+
+  }
